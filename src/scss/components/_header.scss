@@ -1,0 +1,161 @@
+.header {
+  margin-bottom: 25px;
+  width: 100%;
+  background-color: var(--light-color);
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(0 0 0 / 20%);
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
+
+    @include small-tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__logo-category {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 15px;
+
+    @include desktop {
+      flex-direction: column;
+    }
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: center;
+      margin-right: 0;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
+    @include small-tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    margin-right: 23px;
+    min-width: 240px;
+
+    @include desktop {
+      margin-bottom: 10px;
+    }
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+
+    @include small-tablet {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &__category-link {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-family, sans-serif);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: rgb(0 0 0 / 60%);
+
+    &::before {
+      content: "";
+      display: block;
+      margin-right: 10px;
+      width: 1px;
+      height: 16px;
+      background-color: rgb(0 0 0 / 60%);
+
+      @include desktop {
+        display: none;
+      }
+
+      @include tablet {
+        display: block;
+      }
+
+      @include small-tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__search {
+    position: relative;
+    margin-right: 15px;
+
+    @include small-tablet {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.search {
+  &__input {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 15px 15px 50px;
+    width: 100%;
+    min-width: 330px;
+    font-family: var(--font-family, sans-serif);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: rgb(0 0 0 / 60%);
+    background: #f0f0f0;
+
+    &::-webkit-input-placeholder {
+      font-style: normal;
+      color: rgb(0 0 0 / 60%);
+      background: #f0f0f0;
+    }
+
+    &::-moz-placeholder {
+      font-style: normal;
+      color: rgb(0 0 0 / 60%);
+      background: #f0f0f0;
+    }
+
+    &::-ms-input-placeholder {
+      font-style: normal;
+      color: rgb(0 0 0 / 60%);
+      background: #f0f0f0;
+    }
+
+    @include small-tablet {
+      min-width: auto;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    left: 20px;
+    top: 16px;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/icon-search.svg");
+  }
+}

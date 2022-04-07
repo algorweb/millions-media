@@ -1,0 +1,16 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "myriadpro-web";
+  --content-width: 1520px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --light-color: #fff;
+  --dark-color: #e5e5e5;
+  --dark-text-color: #000;
+  --light-text-color: rgb(0 0 0 / 70%);
+  --img-bg-color: #b7b7b7;
+}

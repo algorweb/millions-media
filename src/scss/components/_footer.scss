@@ -1,0 +1,189 @@
+.footer {
+  &__wrap-up {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(0 0 0 / 20%);
+    padding-top: 60px;
+    padding-bottom: 40px;
+
+    @include large-desktop {
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding-top: 30px;
+      padding-bottom: 20px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__subscribe {
+    @include desktop {
+      width: 100%;
+    }
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__logo {
+    margin-right: 20px;
+
+    @include mobile {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__wrap-down {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 70px;
+
+    @include small-tablet {
+      padding-top: 20px;
+      padding-bottom: 35px;
+    }
+
+    @include mobile {
+      flex-flow: column wrap;
+      justify-content: center;
+    }
+  }
+
+  &__copyrite {
+    color: rgb(0 0 0 / 60%);
+
+    @include mobile {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__politic {
+    color: rgb(0 0 0 / 60%);
+  }
+}
+
+.nav {
+  margin-right: 20px;
+
+  &__list {
+    display: flex;
+
+    @include large-desktop {
+      flex-direction: column;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 45px;
+
+    @include small-tablet {
+      margin-bottom: 5px;
+    }
+
+    @include mobile {
+      margin-right: 0;
+    }
+  }
+
+  &__item {
+    @include mobile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 0;
+      text-align: center;
+    }
+  }
+
+  &__link {
+    color: #000;
+  }
+}
+
+.subscribe {
+  &__title {
+    margin-bottom: 15px;
+    color: #000;
+
+    @include desktop {
+      margin-right: 15px;
+      margin-bottom: 0;
+    }
+
+    @include mobile {
+      margin-top: 15px;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__wrap-input-btn {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(0 0 0 / 10%);
+    border-radius: 10px;
+    padding: 0;
+
+    @include mobile {
+      flex-wrap: wrap;
+      justify-content: center;
+      border: none;
+    }
+  }
+
+  &__label {
+    @include mobile {
+      width: 100%;
+      max-width: 250px;
+    }
+  }
+
+  &__input {
+    margin: 15px 0 15px 20px;
+    outline: none;
+    background-color: transparent;
+
+    @include mobile {
+      margin: 0;
+      margin-bottom: 15px;
+      border: 1px solid rgb(0 0 0 / 10%);
+      border-radius: 10px;
+      padding: 15px;
+      width: 100%;
+      max-width: 250px;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    padding: 15px 20px 15px 43px;
+
+    &::before {
+      @include bg-cover;
+
+      content: "";
+      position: absolute;
+      left: 17px;
+      top: calc(50% - 6px);
+      display: block;
+      width: 18px;
+      height: 12px;
+      background-image: url("../img/mail.svg");
+    }
+  }
+
+  @include desktop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+  }
+}
