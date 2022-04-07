@@ -807,7 +807,7 @@ p {
   max-width: 685px;
   background-color: var(--img-bg-color);
 }
-.article__play {
+.article__play-btn {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -823,6 +823,12 @@ p {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.article__play-btn:hover {
+  background-color: rgba(211, 56, 56, 0.7);
 }
 .article__time {
   position: absolute;
