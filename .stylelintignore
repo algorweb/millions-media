@@ -1,1 +1,3 @@
-src/scss/vendor/normalize.css
+src/scss/vendor/*.*
+src/*.html
+src/partials/*.html
